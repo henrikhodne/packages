@@ -2,17 +2,18 @@
 
 pkgname=hk-git
 pkgver=20140311.r5.ge083b5b
-pkgrel=1
+pkgrel=2
 pkgdesc="Fast Heroku Client"
 arch=('x86_64' 'i686')
 url="https://github.com/heroku/hk"
 license=('MIT')
-makedepends=('go' 'mercurial')
+makedepends=('go' 'mercurial' 'git')
 depends=('glibc')
 options=('!strip' '!emptydirs')
 source=("git://github.com/heroku/hk.git")
 md5sums=('SKIP')
 provides=('hk')
+conflicts=('hk')
 
 pkgver() {
   cd "$srcdir/hk"
